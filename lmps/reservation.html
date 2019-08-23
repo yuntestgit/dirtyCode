@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>龍門國小遊學計畫</title>
+    <!-- Bootstrap Core CSS -->
+    <link href="bootstrap.min.css" rel="stylesheet">
+    <!-- Custom Fonts -->
+    <link href="font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
+
+    <!-- Theme CSS -->
+    <link href="agency.min.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js" integrity="sha384-0s5Pv64cNZJieYFkXYOTId2HMA2Lfb6q2nAcx2n0RTLUnCAoTTsS0nKEO27XyKcY" crossorigin="anonymous"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js" integrity="sha384-ZoaMbDF+4LeFxg6WdScQ9nnR1QC2MIRxA1O9KWEXQwns1G8UNyIEZIQidzb0T1fo" crossorigin="anonymous"></script>
+    <![endif]-->
+	
+	<script>
+		function s1_onchange()
+		{
+			//alert(document.getElementById("s1").value);
+			//othR
+			if(document.getElementById("s1").value == "othR")
+			{
+				document.getElementById("t1").style.display = "";
+			}
+			else
+			{
+				document.getElementById("t1").style.display = "none";
+			}
+		}
+	</script>
+</head>
+
+<body id="page-top" class="index">
+
+    <!-- Navigation -->
+    <nav id="mainNav" class="navbar navbar-default navbar-custom navbar-fixed-top">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
+                </button>
+                <a class="navbar-brand page-scroll" href="#page-top">龍門國小遊學計畫</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="hidden">
+                        <a href="#page-top"></a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="index.html">關於計畫</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="introduction.html">路線介紹</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="reservation.html">路線預約</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="review.html">歷次活動</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="download.html">下載專區</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="intro-text">
+                <div class="intro-lead-in"></div>
+                <div class="intro-heading"></div>
+                <!--<a href="#services" class="page-scroll btn btn-xl">了解更多</a>-->
+            </div>
+        </div>
+    </header>
+
+    <!-- Services Section -->
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h2 class="section-heading">馬上預約</h2>
+                <h3 class="section-subheading text-muted"></h3>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <form name="sentMessage" id="contactForm" novalidate="">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="姓名 *" id="name" required="" data-validation-required-message="Please enter your name." aria-invalid="false">
+                                <p class="help-block text-danger"></p>
+                            </div>
+                            <div class="form-group">
+                                <input type="email" class="form-control" placeholder="電子郵件 *" id="email" required="" data-validation-required-message="Please enter your email address." aria-invalid="false">
+                                <p class="help-block text-danger"></p>
+                            </div>
+                            <div class="form-group">
+                                <input type="tel" class="form-control" placeholder="電話 *" id="phone" required="" data-validation-required-message="Please enter your phone number." aria-invalid="false">
+                                <p class="help-block text-danger"></p>
+                            </div>
+                        </div>
+                        <div class="col-md-6 text-center">
+                          <h5>選擇路線：</h5>
+                          <select id="s1" ="form-control" onchange="s1_onchange();">
+                            <option value="R1">老聚落新生命—南寮聚落深度遊</option>
+                            <option value="R2">老聚落新生命—龍門聚落海之港</option>
+                            <option value="R3">老聚落新生命—尖山聚落農之作</option>
+                            <option value="R4">小漁人老智慧—走訪潮間帶</option>
+                            <option value="R1">小漁人老智慧—小小漁人</option>
+                            <option value="R2">小漁人老智慧—魚灶飄香味</option>
+                            <option value="R3">小農夫老技法—澎湖風茹妙用多</option>
+                            <option value="R4">小農夫老技法—小小農夫</option>
+                            <option value="R1">創意文化市集—福氣炸棗傳幸福</option>
+                            <option value="R2">創意文化市集—灰窯粉白玩新意</option>
+                            <option value="R3">創意文化市集—海飄海產談永續</option>
+                            <option value="R4">創意文化市集—國樂悠揚譜古調</option>
+                            <option value="R1">科學人玩能源—能源應用妙趣多</option>
+                            <option value="R2">科學人玩能源—發電小物玩科學</option>
+                            <option value="R3">科學人玩能源—電力機構知能源</option>
+                            <option value="othR">自訂(請在下方填寫路線需求)</option>
+                          </select>
+                          <div class="form-group">
+                            <textarea id="t1" class="form-control" id="message" style="display:none;"></textarea>
+                            <p class="help-block text-danger"></p>
+                          </div>
+                        </div>
+                        <div class="clearfix"></div>
+                        <div class="col-lg-12 text-center">
+                            <div id="success"></div>
+                            <button type="submit" class="btn btn-xl" style="color:black">送出</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                </div>
+                <div class="col-md-4">
+                    <ul class="list-inline social-buttons">
+                        <li><a href="https://www.facebook.com/lmps.phc.edu.tw/" target="_blank"><i class="fa fa-facebook"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- jQuery -->
+    <script src="jquery.min.js"></script>
+    <!-- Bootstrap Core JavaScript -->
+    <script src="bootstrap.min.js"></script>
+    <!-- Plugin JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js" integrity="sha384-mE6eXfrb8jxl0rzJDBRanYqgBxtJ6Unn4/1F7q4xRRyIw7Vdg9jP4ycT7x1iVsgb" crossorigin="anonymous"></script>
+    <!-- Contact Form JavaScript -->
+    <script src="jqBootstrapValidation.js"></script>
+    <script src="contact_me.js"></script>
+    <!-- Theme JavaScript -->
+    <script src="agency.min.js"></script>
+  </body>
+</html>

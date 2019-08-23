@@ -1,0 +1,394 @@
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<link rel="shortcut icon" href="img/myicon.png">
+		<title>線上題庫系統</title>
+		
+		<style>
+			* {
+				margin:0px;
+				padding:0px;
+			}
+			
+			body {
+				text-align:center;
+				overflow-x:auto;
+				overflow-y:scroll;
+				background-image:linear-gradient(to left, #fff, #555, #fff);
+			}
+			
+			#allbg {
+				position:fixed;
+				top:0px;
+				left:50%;
+				margin-left:-475px;
+				width:950px;
+				height:100%;
+				background-image:url('img/all.png'); 
+				background-repeat:no-repeat;
+			}
+			
+			#spacer {
+				width:950px;
+				height:60px;
+				margin-left:auto;
+				margin-right:auto;
+			}
+			
+			#main {
+				width:950px;
+				margin-left:auto;
+				margin-right:auto;
+			}
+			
+			#mainbg {
+				position:fixed;
+				top:0px;
+				bottom:0px;
+				width:950px;
+				opacity:0.7;
+				background-color:#fff;
+			}
+			
+			#displayer {
+				position:absolute;
+				width:950px;
+			}
+			
+			#bannermaster {
+				position:fixed;
+				top:0px;
+				left:50%;
+				margin-left:-475px;
+				width:950px;
+				height:60px;
+				background-image:url('img/top.png');
+			}
+			
+			#bannerbg {
+				position:absolute;
+				width:600px;
+				height:60px;
+				font-size:20px;
+				opacity:0.5;
+				background-color:#fff;
+			}
+			
+			#banner {
+				position:absolute;
+				width:579px;
+				height:40px;
+				padding-left:20px;
+				padding-top:20px;
+				font-size:20px;
+				font-weight:900;
+				text-shadow:1px 1px 1px #000;
+				color:#fff;
+				text-align:left;
+				border-right:#fff 1px solid;
+			}
+			
+			.btnbg {
+				position:absolute;
+				width:100px;
+				height:60px;
+				font-size:20px;
+				opacity:0.5;
+				background-color:#fff;
+			}
+			
+			.btn {
+				position:absolute;
+				width:99px;
+				height:40px;
+				font-size:20px;
+				font-weight:900;
+				text-shadow:1px 1px 1px #000;
+				padding-top:20px;
+				color:#fff;
+				border-right:#fff 1px solid;
+			}
+			
+			a {
+				color:#0000ff;
+			}
+		</style>
+
+		<script type="text/javascript" src="script.js"></script>
+		<script type="text/javascript">
+			
+		</script>
+	</head>
+	
+	<body onselectstart="return false;">
+		<div id="allbg"></div>
+		
+		<div id="spacer"></div>
+		<div id="main">
+			<div id="mainbg"></div>
+			<div id="displayer">
+				<div style='margin-top:20px; padding-top:10px; font-size:20px; font-weight:bolder; border-radius: 20px 20px 0px 0px; border-top:#000 1px solid; border-left:#000 1px solid; border-right:#000 1px solid; width:800px; height:35px; margin-left:auto; margin-right:auto; background-image:linear-gradient(to bottom, #999, #fff);'>
+					吉澤線上測驗系統
+				</div>
+				
+				<div style='text-align:left; padding-top:20px; font-size:18px; border-radius: 0px 0px 20px 20px; border-bottom:#000 1px solid; border-left:#000 1px solid; border-right:#000 1px solid; padding-left:20px; padding-right:20px; padding-bottom:20px; width:760px; margin-left:auto; margin-right:auto; background-color:#fff;'>
+					吉澤線上測驗系統主要功能包含了多功能測驗、快速新增編輯題庫。測驗部分為了方便使用者使用，我們讓測驗題數範圍可以自己選擇，測驗結束後將會有評分，讓使用者了解自己的學習成果。吉澤測驗系統強大的地方在於題庫的編輯，使用者可以新增多個題庫資料，在輸入測驗題庫時，我們使用了智慧輸入讓使用者能夠方便快速的輸入題庫，新增後可以隨時修改題庫的內容，大大提升自我學習與自我測驗的便利性。
+					<br><br>
+					指導老師：許金童
+					<br><br>
+					設計師：<span style='text-decoration:underline; color:0000ff; cursor:pointer;' onclick='global.index_onclick(15);'>蔡宏皓</span>、<span style='text-decoration:underline; color:0000ff; cursor:pointer;' onclick='global.index_onclick(35);'>馬建峰</span>、<span style='text-decoration:underline; color:0000ff; cursor:pointer;' onclick='global.index_onclick(46);'>邢豫</span>、<span style='text-decoration:underline; color:0000ff; cursor:pointer;' onclick='global.index_onclick(59);'>尹新勻</span>
+					
+					<div id='index15' style='margin-top:20px; margin-left:auto; margin-right:auto; width:515px; font-size:15px; display:none;'>
+						<table style='background-color:#ccc; color:#000;'>
+							<tr>
+								<td style='background-color:fff; width:80px;'>姓名：</td>
+								<td style='background-color:fff; width:100px;'>蔡宏皓</td>
+								<td rowspan='8'><img src='img/15.jpg' style='width:300px;'></td>
+							</tr>
+							<tr>
+								<td style='background-color:fff; margin-left:10px;'>學號：</td>
+								<td style='background-color:fff; margin-left:10px;'>102104215</td>
+							</tr>
+							<tr>
+								<td style='background-color:fff;'>班級：</td>
+								<td style='background-color:fff;'>電子4B</td>
+							</tr>
+							<tr>
+								<td style='background-color:fff;'>星座：</td>
+								<td style='background-color:fff;'>牡羊座</td>
+							</tr>
+							<tr>
+								<td style='background-color:fff;'>血型：</td>
+								<td style='background-color:fff;'>O型</td>
+							</tr>
+							<tr>
+								<td style='background-color:fff;'>身高：</td>
+								<td style='background-color:fff;'>171</td>
+							</tr>
+							<tr>
+								<td style='background-color:fff;'>體重：</td>
+								<td style='background-color:fff;'>72</td>
+							</tr>
+							<tr>
+								<td style='background-color:fff;'>興趣：</td>
+								<td style='background-color:fff;'>Angela Baby</td>
+							</tr>
+							<tr>
+								<td style='background-color:fff;'>FB：</td>
+								<td style='background-color:fff; height:48px' colspan='2'><a href='https://www.facebook.com/profile.php?id=100006832625778' target='_blank'>https://www.facebook.com/profile.php?id=100006832625778</a></td>
+							</tr>
+						</table>
+					</div>
+					
+					<div id='index35' style='margin-top:20px; margin-left:auto; margin-right:auto; width:515px; font-size:15px; display:none;'>
+						<table style='background-color:#ccc; color:#000;'>
+							<tr>
+								<td style='background-color:fff; width:80px;'>姓名：</td>
+								<td style='background-color:fff; width:100px;'>馬建峰</td>
+								<td rowspan='8'><img src='img/35.jpg' style='width:300px;'></td>
+							</tr>
+							<tr>
+								<td style='background-color:fff; margin-left:10px;'>學號：</td>
+								<td style='background-color:fff; margin-left:10px;'>102104235</td>
+							</tr>
+							<tr>
+								<td style='background-color:fff;'>班級：</td>
+								<td style='background-color:fff;'>電子4B</td>
+							</tr>
+							<tr>
+								<td style='background-color:fff;'>星座：</td>
+								<td style='background-color:fff;'>天蠍座</td>
+							</tr>
+							<tr>
+								<td style='background-color:fff;'>血型：</td>
+								<td style='background-color:fff;'>O型</td>
+							</tr>
+							<tr>
+								<td style='background-color:fff;'>身高：</td>
+								<td style='background-color:fff;'>170</td>
+							</tr>
+							<tr>
+								<td style='background-color:fff;'>體重：</td>
+								<td style='background-color:fff;'>75</td>
+							</tr>
+							<tr>
+								<td style='background-color:fff;'>興趣：</td>
+								<td style='background-color:fff;'>小黑人</td>
+							</tr>
+							<tr>
+								<td style='background-color:fff;'>FB：</td>
+								<td style='background-color:fff; height:35px' colspan='2'><a href='https://www.facebook.com/profile.php?id=100002385634023' target='_blank'>https://www.facebook.com/profile.php?id=100002385634023</a></td>
+							</tr>
+						</table>
+					</div>
+					
+					<div id='index46' style='margin-top:20px; margin-left:auto; margin-right:auto; width:515px; font-size:15px; display:none;'>
+						<table style='background-color:#ccc; color:#000;'>
+							<tr>
+								<td style='background-color:fff; width:80px;'>姓名：</td>
+								<td style='background-color:fff; width:100px;'>邢豫</td>
+								<td rowspan='8'><img src='img/46.jpg' style='width:300px;'></td>
+							</tr>
+							<tr>
+								<td style='background-color:fff; margin-left:10px;'>學號：</td>
+								<td style='background-color:fff; margin-left:10px;'>102104246</td>
+							</tr>
+							<tr>
+								<td style='background-color:fff;'>班級：</td>
+								<td style='background-color:fff;'>電子4B</td>
+							</tr>
+							<tr>
+								<td style='background-color:fff;'>星座：</td>
+								<td style='background-color:fff;'>摩羯座</td>
+							</tr>
+							<tr>
+								<td style='background-color:fff;'>血型：</td>
+								<td style='background-color:fff;'>O型</td>
+							</tr>
+							<tr>
+								<td style='background-color:fff;'>身高：</td>
+								<td style='background-color:fff;'>183</td>
+							</tr>
+							<tr>
+								<td style='background-color:fff;'>體重：</td>
+								<td style='background-color:fff;'>74</td>
+							</tr>
+							<tr>
+								<td style='background-color:fff;'>興趣：</td>
+								<td style='background-color:fff;'>彩虹人</td>
+							</tr>
+							<tr>
+								<td style='background-color:fff;'>FB：</td>
+								<td style='background-color:fff; height:48px' colspan='2'><a href='https://www.facebook.com/profile.php?id=100001998797468' target='_blank'>https://www.facebook.com/profile.php?id=100001998797468</a></td>
+							</tr>
+						</table>
+					</div>
+					
+					<div id='index59' style='margin-top:20px; margin-left:auto; margin-right:auto; width:515px; font-size:15px; display:none;'>
+						<table style='background-color:#ccc; color:#000;'>
+							<tr>
+								<td style='background-color:fff; width:80px;'>姓名：</td>
+								<td style='background-color:fff; width:100px;'>尹新勻</td>
+								<td rowspan='8'><img src='img/59.png' style='width:300px;'></td>
+							</tr>
+							<tr>
+								<td style='background-color:fff; margin-left:10px;'>學號：</td>
+								<td style='background-color:fff; margin-left:10px;'>102104259</td>
+							</tr>
+							<tr>
+								<td style='background-color:fff;'>班級：</td>
+								<td style='background-color:fff;'>電子4B</td>
+							</tr>
+							<tr>
+								<td style='background-color:fff;'>星座：</td>
+								<td style='background-color:fff;'>水瓶座</td>
+							</tr>
+							<tr>
+								<td style='background-color:fff;'>血型：</td>
+								<td style='background-color:fff;'>O型</td>
+							</tr>
+							<tr>
+								<td style='background-color:fff;'>身高：</td>
+								<td style='background-color:fff;'>168</td>
+							</tr>
+							<tr>
+								<td style='background-color:fff;'>體重：</td>
+								<td style='background-color:fff;'>50</td>
+							</tr>
+							<tr>
+								<td style='background-color:fff;'>興趣：</td>
+								<td style='background-color:fff;'>小白人</td>
+							</tr>
+							<tr>
+								<td style='background-color:fff;'>FB：</td>
+								<td style='background-color:fff; height:33px' colspan='2'><a href='https://www.facebook.com/yinxinyun' target='_blank'>https://www.facebook.com/yinxinyun</a></td>
+							</tr>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<div id="bannermaster">
+			<div id="bannerbg"></div>
+			<div id="banner">
+				<div style="width:100%;">
+					<img id="displayer_visible_img" src="img/myicon.png" style="float:left; width:25px; height:25px; opacity:0.7; cursor:pointer;" onclick="global.btn_displayer_visible();">
+					<input type="hidden" id="displayer_visible" value="1">
+					<div id="titlebar" style="float:right; width:539;">首頁</div>
+				</div>
+			</div>
+			
+			<input type="hidden" id="global_hide_nowpage" value="1">
+			
+			<div id="global_btn_bg1" class="btnbg" style="left:600px; opacity:0.3;"></div>
+			<div id="global_btn1" class="btn" style="left:600px;" onmouseover="global.btn_onmouseover(1);" onmouseout="global.btn_onmouseout(1);" onclick="global.btn_onclick(1);">首頁</div>
+			
+			<div id="global_btn_bg2" class="btnbg" style="left:700px;"></div>
+			<div id="global_btn2" class="btn" style="left:700px;" onmouseover="global.btn_onmouseover(2);" onmouseout="global.btn_onmouseout(2);" onclick="global.btn_onclick(2);">測驗</div>
+			
+			<div id="global_btn_bg3" class="btnbg" style="left:800px;"></div>
+			<div id="global_btn3" class="btn" style="left:800px;" onmouseover="global.btn_onmouseover(3);" onmouseout="global.btn_onmouseout(3);" onclick="global.btn_onclick(3);">題庫</div>
+			
+			<div id="global_btn_space" class="btnbg" style="left:900px; width:50px;"></div>
+		</div>
+		
+		<!--↓↓↓↓↓alert or confirm↓↓↓↓↓-->
+		
+		<div id='global_masker' style='width:100%; height:100%; background-color:#000; position:fixed; top:0px; left:0px; opacity:0.5; display:none;'></div>
+		<div id='global_masker2' style='width:100%; height:100%; background-color:#000; position:fixed; top:0px; left:0px; opacity:0.5; display:none;' onclick='global.masker2_onclick();'></div>
+		
+		<div id="p2_examing_notyet" style="padding:10px; width:180px; height:72px; position:fixed; top:50%; left:50%; margin-left:-90px; margin-top:-36px; background-color:#fff; display:none;">
+			<div style='text-align:left;'>還有題目尚未作答，確定要結束嗎？</div>
+			<input type='button' style='margin-top:15px; margin-left:0px; width:80px; height:20px;' value='取消' onclick="p2.notyet_cancel();">
+			<input type='button' style='margin-top:15px; margin-left:16px; width:80px; height:20px;' value='確定' onclick="p2.notyet_confirm();">
+		</div>
+		
+		<div id="p3_delete_topic" style="padding:10px; width:206px; height:92px; position:fixed; top:50%; left:50%; margin-left:-103px; margin-top:-46px; background-color:#fff; display:none;">
+			<div style='text-align:left;'>刪除題庫時，題庫中所有題目都會被刪除，確定要刪除`<span id='p3_delete_topic_name'></span>`嗎？</div>
+			<input type='hidden' id='p3_delete_topic_id' value=''>
+			<input type='button' style='margin-top:15px; margin-left:0px; width:80px; height:20px;' value='取消' onclick="p3.btn_delete_data_no();">
+			<input type='button' style='margin-top:15px; margin-left:16px; width:80px; height:20px;' value='確定' onclick="p3.btn_delete_data_yes();">
+		</div>
+		
+		<div id='p3_insert_page_page1_set_answer' style='width:400px; height:300px; position:fixed; top:50%; left:50%; margin-left:-200px; margin-top:-150px; display:none;'>
+			<textarea id='p3_insert_page_page1_answer' style='width:400px; height:275px; resize:none;'></textarea>
+			<div style='width:180px; height:25px; float:right; text-align:left;'>
+				<input type='button' style='margin-top:5px; margin-left:0px; width:80px; height:20px;' value='取消' onclick="p3_insert_page.page1_set_answer_cancel();">
+				<input type='button' style='margin-top:5px; margin-left:16px; width:80px; height:20px;' value='確定' onclick="p3_insert_page.page1_set_answer_confirm();">
+			</div>
+		</div>
+		
+		<div id="p3_insert_page_page2_confirm" style="padding:10px; width:124px; height:116px; position:fixed; top:50%; left:50%; margin-left:-62px; margin-top:-58px; background-color:#fff; display:none;">
+			<div style='text-align:left;'>
+				題目不能空白<img id="page2_topic_space_ok" src="img/ok.png" style='margin-left:10px; width:15px; display:none;'><img id="page2_topic_space_no" src="img/no.png" style='margin-left:10px; width:15px;'>
+			</div>
+			<div style='text-align:left; margin-top:10px;'>
+				選項不能空白<img id="page2_answer_space_ok" src="img/ok.png" style='margin-left:10px; width:15px; display:none;'><img id="page2_answer_space_no" src="img/no.png" style='margin-left:10px; width:15px;'>
+			</div>
+			<div style='text-align:left; margin-top:10px;'>
+				必須設定答案<img id="page2_set_answer_ok" src="img/ok.png" style='margin-left:10px; width:15px; display:none;'><img id="page2_set_answer_no" src="img/no.png" style='margin-left:10px; width:15px;'>
+			</div>
+			<input type='button' style='margin-top:15px; width:80px; height:20px;' value='確定' onclick="p3_insert_page.page2_insert_data_confirm();">
+		</div>
+		
+		<div id="p3_update_page_confirm" style="padding:10px; width:124px; height:116px; position:fixed; top:50%; left:50%; margin-left:-62px; margin-top:-58px; background-color:#fff; display:none;">
+			<div style='text-align:left;'>
+				題目不能空白<img id="p3_update_page_topic_space_ok" src="img/ok.png" style='margin-left:10px; width:15px; display:none;'><img id="p3_update_page_topic_space_no" src="img/no.png" style='margin-left:10px; width:15px;'>
+			</div>
+			<div style='text-align:left; margin-top:10px;'>
+				選項不能空白<img id="p3_update_page_answer_space_ok" src="img/ok.png" style='margin-left:10px; width:15px; display:none;'><img id="p3_update_page_answer_space_no" src="img/no.png" style='margin-left:10px; width:15px;'>
+			</div>
+			<div style='text-align:left; margin-top:10px;'>
+				必須設定答案<img id="p3_update_page_set_answer_ok" src="img/ok.png" style='margin-left:10px; width:15px; display:none;'><img id="p3_update_page_set_answer_no" src="img/no.png" style='margin-left:10px; width:15px;'>
+			</div>
+			<input type='button' style='margin-top:15px; width:80px; height:20px;' value='確定' onclick="p3_update_page.update_data_confirm();">
+		</div>
+		
+		<div id="p3_update_page_delete" style="padding:10px; width:180px; height:54px; position:fixed; top:50%; left:50%; margin-left:-90px; margin-top:-27px; background-color:#fff; display:none;">
+			<div style='text-align:left;'>確定要刪除題目嗎？</div>
+			<input type='button' style='margin-top:15px; margin-left:0px; width:80px; height:20px;' value='取消' onclick="p3_update_page.displayer_delete_no();">
+			<input type='button' style='margin-top:15px; margin-left:16px; width:80px; height:20px;' value='確定' onclick="p3_update_page.displayer_delete_yes();">
+		</div>
+	</body>
+</html>

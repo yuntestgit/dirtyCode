@@ -1,0 +1,70 @@
+<script>
+window.onload = function()
+{	
+	ajax("http://www.yun.net/Examination/V7/ajax", "page=1", "handleStateChange");
+}
+
+function handleStateChange(response)
+{
+	alert(response);
+}
+
+function ajax(url, data, func, method)
+{
+	method = method || "get";
+	method.toLowerCase();
+	
+	var httpRequest;
+
+	if(window.XMLHttpRequest)
+	{
+		httpRequest = new XMLHttpRequest();
+		if(httpRequest.overrideMimeType)
+		{
+			httpRequest.overrideMimeType('text/xml');
+		}
+	}
+	else if (window.ActiveXObject)
+	{
+		try
+		{
+			httpRequest = new ActiveXObject("Msxml2.XMLHTTP");
+		}
+		catch (e)
+		{
+			try
+			{
+				httpRequest = new ActiveXObject("Microsoft.XMLHTTP");
+			}
+			catch (e)
+			{}
+		}
+	}
+	
+	httpRequest.onreadystatechange = function()
+	{
+		if(httpRequest.readyState == 4)
+		{
+			if(httpRequest.status == 200)
+			{
+				var evalfunc = eval(func);
+				evalfunc(httpRequest.responseText);
+			}
+		}
+	};
+	
+	data = encodeURI(data);
+	
+	if(method=="get")
+	{
+		httpRequest.open('get', url+"?"+data, true);
+		httpRequest.send('');
+	}
+	else if(method=="post")
+	{
+		httpRequest.open('post', url, true);
+		httpRequest.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+		httpRequest.send(data);
+	}
+}
+</script>
